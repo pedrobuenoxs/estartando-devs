@@ -25,13 +25,14 @@ e retorna o número de vogais que ela tem (maiusculas e minusculas)
 const contVogais = (str) => {
 
     let contador = 0;
-    str.toLowerCase(); 
+    let strLowerCase = str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");;
+    
 
     for(i = 0 ; i < str.length; i++)
     {
         for(j=0 ; j < vogais.length ; j++){
 
-            if(str[i] === vogais[j]){
+            if(strLowerCase[i] == vogais[j]){
                 contador++;
             }
         }
@@ -88,4 +89,4 @@ const mainFunction = (str) => {
     }
 }
 
-mainFunction("Felicia");
+mainFunction("JoãOzinho");
