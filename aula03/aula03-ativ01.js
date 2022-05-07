@@ -89,4 +89,4 @@ const mainFunction = (str) => {
     }
 }
 
-mainFunction("JoãOzinho");
+mainFunction("Joãozinho");
