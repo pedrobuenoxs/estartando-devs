@@ -12,9 +12,8 @@ console.log(path.dirname(__dirname))
 const numberFiles = 5;
 
 Array(numberFiles).fill(0).forEach((el,index) => {
-    fs.writeFile(`file${index+1}`,`File number ${index+1}`,(err) => {
-        (err!=null) ?  console.log("Can't create the files!") : console.log(`File nº${index+1} created!`) 
-    })
+    fs.writeFileSync(`file${index+1}`,`File number ${index+1}`)
+    console.log(`File nº${index+1} created!`)   
     
 })
 console.timeEnd("time")
